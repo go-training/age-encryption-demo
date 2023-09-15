@@ -14,3 +14,9 @@ Public key: your_age_public_key
 $ echo "Hello World" > file.txt
 $ age -r your_age_public_key -o file.txt.age file.txt
 ```
+
+## Decrypting a file
+
+```bash
+age --decrypt -i key.txt file.txt.age > file.txt
+```
