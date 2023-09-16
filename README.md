@@ -20,3 +20,18 @@ $ age -r your_age_public_key -o file.txt.age file.txt
 ```bash
 age --decrypt -i key.txt file.txt.age > file.txt
 ```
+
+## Example
+
+How to create a key pair:
+
+```bash
+age-keygen -o keys/key.txt
+```
+
+How to encrypt the finetune [data file](./data/finetune_data.jsonl) (which is a jsonl file):
+
+```bash
+age -r $(cat keys/key.txt | grep '^# public key:' | cut -d ' ' -f 4) \
+  -o data/finetune_data.jsonl.age data/finetune_data.jsonl
+```
