@@ -24,4 +24,6 @@ func main() {
 	fmt.Fprintf(os.Stdout, "# created: %s\n", time.Now().Format(time.RFC3339))
 	fmt.Fprintf(os.Stdout, "# public key: %s\n", publicKey)
 	fmt.Fprintf(os.Stdout, "%s\n", privateKey)
+
+	// TODO: decrypt and verify data from file
 }
